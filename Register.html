@@ -193,6 +193,42 @@
 
     document.onload = retrieveTheme();
 
+    const inputEl = document.getElementById('img');
+// Gets input element
+
+inputEl.addEventListener('change' , () => {
+// Listens for new input file
+
+    const file = inputEl.files[0]; 
+    // Gets file from input element
+
+    const fr = new FileReader();
+    // Creates new FileReader object
+
+    fr.readAsDataURL(file);
+    // Set FileReader to output data as URL string
+
+    fr.addEventListener('load', () => {
+        // Waits for file reading to be complete
+
+        const url = fr.result
+        // Save result
+
+    })})
+
+    inputEl.addEventListener('change' , () => {
+    const file = inputEl.files[0]; 
+    const fr = new FileReader();
+    fr.readAsDataURL(file);
+ 
+    fr.addEventListener('load', () => {
+        const url = fr.result
+        var imgs = JSON.parse(localStorage.getItem('images') || '[]');
+        imgs.push(url);
+        localStorage.setItem('images', JSON.stringify(imgs));
+        // Saves image to localStorage
+    })
+});
 
 
  
