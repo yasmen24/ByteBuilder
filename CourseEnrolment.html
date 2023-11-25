@@ -17,18 +17,28 @@
 
 </head>
 <body>
-<header>
-    <a href="index.html" class="logo" accesskey="h"><img src="images/ByteBuilder.PNG" alt="ByteBuilder's Logo"
-                                                         width="150" height="110"></a>
-    <nav class="navbar">
-        <ul>
+    <header>
+        <a href="index.html" class="logo" accesskey="h"><img src="images/ByteBuilder.PNG" alt="ByteBuilder's Logo" width="150" height="110"></a>
+        <nav class="navbar">
+          <ul>
             <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
             <li><a href="Parent.html" accesskey="p">Parents</a></li>
             <li><a href="Administrator.html" accesskey="a">Administrator</a></li>
             <li><a href="Tutors.html" accesskey="t">Tutors</a></li>
-        </ul>
-    </nav>
-</header>
+          </ul>
+        </nav>
+        <button class="menu-button">&#9776;</button>
+      </header>
+      <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const menuButton = document.querySelector('.menu-button');
+        const navbar = document.querySelector('.navbar');
+      
+        menuButton.addEventListener('click', () => {
+          navbar.classList.toggle('active');
+        });
+      });
+    </script>
 
 <main>
 
