@@ -1,0 +1,37 @@
+
+table, th, td {
+    border:1px solid black;
+    text-align: center;
+    padding: 5px;
+  }
+ 
+  .ScedContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+    
+  }
+
+  table{
+    width: 90%;
+    box-shadow: 3px 4px 2px #c5e0e1;
+  }
+  
+  
+  table caption{
+    text-align: left;
+  }
+  
+  table th{
+    padding: 10px;
+  }
+  
+  td.timeSpan{
+    padding: 25px;
+  }
+   
+  td.off-day{
+    background-color: grey;
+  }
+  

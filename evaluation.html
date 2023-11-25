@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Evaluation page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="evaluation.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" accesskey="h"><img src="images/ByteBuilder.PNG" alt="ByteBuilder's Logo" width="150" height="110"></a>
+            <nav class="navbar">
+                <ul>
+                 <li><a href="Courses.html">Current Courses</a></li>
+                 <li><a href="Parent.html">Parents</a></li>
+                 <li><a href="Administrator.html">Administrator</a></li>
+                 <li><a href="Tutors.html">Tutors</a></li>
+                </ul> 
+             </nav>
+</header>
+    <main>
+
+
+
+
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Parent.html">Parents</a></li>
+            <li><a href="evaluation.html">Course Evaluation</a></li>
+        </ul>
+
+
+
+        
+        
+      <!--change theme -->
+      <form action="#" class="color-picker" style="display: none;">
+        <fieldset>
+          <legend class="visually-hidden"> pick a color scheme </legend>
+          <label for="light" class="visually-hidden"> light</label>
+          <input type="radio" name="theme" id="light" checked>
+  
+          <label for="dark" class="visually-hidden"> dark</label>
+          <input type="radio" name="theme" id="dark" >
+  
+  
+        </fieldset>
+       </form>
+  
+
+
+
+
+        <form action="/action_page.php" onsubmit="validateForm(event)">
+            <div class="title">
+                <h3>Course Evaluation:</h3>
+            </div>
+            <div class="wrapper">
+                <div class="filter_course">
+                    <details class="course-dropdown">
+                        <summary class="course-radios">
+                            <input type="radio" name="course-item" id="course-default" title="Courses" checked>
+                            <input type="radio" name="course-item" id="course0" title="AI programming with python">
+                            <input type="radio" name="course-item" id="course1" title="Let's learn arduino">
+                            <input type="radio" name="course-item" id="course2" title="Java">
+                            <input type="radio" name="course-item" id="course3" title="Flutter">
+                            <input type="radio" name="course-item" id="course4" title="Robotics">
+                            <input type="radio" name="course-item" id="course5" title="Scratsh">
+                            <input type="radio" name="course-item" id="course6" title="python">
+                        </summary>
+                        <ul class="list">
+                            <li>
+                                <label for="course0">
+                                    <img src="images/AI_course_image.jpg" alt="course image" class="course-photo">
+
+                                    AI programming with python </label>
+                            </li>
+                            <li>
+                                <label for="course1">
+                                    <img src="images/technology-wallpaper1.jpg" alt="course image" class="course-photo">
+
+                                    Let's learn arduino  </label>
+                            </li>
+                            <li>
+                                <label for="course2">
+                                    <img src="images/coding-language-java.jpg" alt="course image" class="course-photo">
+
+                                    Java </label>
+                            </li>
+                            <li>
+                                <label for="course3">
+                                    <img src="images/flatterimage.png" alt="course image" class="course-photo">
+
+                                    Flutter</label>
+                            </li>
+                            <li>
+                                <label for="course4">
+                                    <img src="images/roboticimages.jpg" alt="course image" class="course-photo">
+
+                                    Robotics</label>
+                            </li>
+                            <li>
+                                <label for="course5">
+                                    <img src="images/Scratch-square-full.jpg" alt="course image" class="course-photo">
+
+                                    Scratsh</label>
+                            </li>
+                            <li>
+                            <label for="course6">
+                            <img src="images/pythonomage.png" alt="course image" class="course-photo">
+                                Python</label>
+                            </li>
+                        </ul>
+                    </details>
+                </div>
+            </div>
+            <div class="wrapper_kids">
+                <div class="filter_kids">
+                    <details class="kids-dropdown">
+                        <summary class="kids-radios">
+                            <input type="radio" name="kids-item" id="kids-default" title="Kids" checked>
+                        </summary>
+                        <ul class="list" id="kids-list">
+                            <!-- Dynamic options  -->
+                        </ul>
+                    </details>
+                </div>
+            </div>
+<!--            <div class="wrapper_kids">-->
+<!--                <div class="filter_kids">-->
+<!--                    <details class="kids-dropdown">-->
+<!--                        <summary class="kids-radios">-->
+<!--                            <input type="radio" name="kids-item" id="kids-default" title="Kids" checked>-->
+<!--                            <input type="radio" name="kids-item" id="kids-item1" title="Taleen Alshebel">-->
+<!--                            <input type="radio" name="kids-item" id="kids-item2" title="Rayan Alshebel">-->
+
+<!--                        </summary>-->
+<!--                        <ul class="list">-->
+<!--                            <li>-->
+<!--                                <label for="kids-item1">Taleen Alshebel <span></span></label>-->
+<!--                            </li>-->
+<!--                            <li>-->
+<!--                                <label for="kids-item2">Rayan Alshebel</label>-->
+<!--                            </li>-->
+<!--                        </ul>-->
+<!--                    </details>-->
+<!--                </div>-->
+<!--            </div>-->
+
+
+
+                <div class="title">
+                <h3>Your Feedback:</h3>
+            </div>
+
+            <div class="rate">
+                <input type="radio" id="star5" name="rate" value="5" >
+                <label for="star5" title="text">5 stars</label>
+                <input type="radio" id="star4" name="rate" value="4" >
+                <label for="star4" title="text">4 stars</label>
+                <input type="radio" id="star3" name="rate" value="3" >
+                <label for="star3" title="text">3 stars</label>
+                <input type="radio" id="star2" name="rate" value="2" >
+                <label for="star2" title="text">2 stars</label>
+                <input type="radio" id="star1" name="rate" value="1" >
+                <label for="star1" title="text">1 star</label>
+            </div>
+            <div class="feedback">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Add your feedback please"></textarea>
+            </div>
+            <div class="action">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+
+
+    </main>
+    
+<footer>
+    <div class="container">
+        <div class="col1"> <!--for the right most column*/-->
+            <h3>ByteBuilder's Story</h3>
+            <p>ByteBuilder embarked on a journey of innovation, shaping the digital realm with their visionary ideas.</p>
+        </div>
+
+        <var></var>
+        
+        <div class="col2">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="tel:+0543080394"><img src="images/phone.png" alt="Phone call"> <span class="phone-number">0543080394</span></a></li>
+                <li><a href="mailto:ByteBulider@info.com"><img src="images/email.png" alt="Email Message"> <span class="email-address">ByteBulider@info.com</span></a></li>
+            </ul>
+            
+            <br>
+            <span>&copy; All rights reserved 2023-2024</span>
+
+        </div>
+
+        <div class="col3"> <!--for the left most column*/-->
+            <h3>Address</h3>
+            <p>Saudi Arabia, Riyadh, King Saud University, Information Technology department IT312</p>
+            <br>
+            <br>
+    
+            <p>Privact - Term</p>
+
+        </div>
+    </div>
+    
+</footer>
+
+
+
+
+    
+<script>
+
+
+    const colorThemes=document.querySelectorAll('[name="theme"]');
+    
+
+    //store the theme
+
+    const storeTheme=function(theme){
+      localStorage.setItem("theme",theme);
+
+    };
+
+
+
+    //apply the theme
+
+    const retrieveTheme = function(){
+    const activeTheme = localStorage.getItem("theme");
+
+    colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme){
+      themeOption.checked = true;
+    }
+
+    });
+
+
+    };
+
+
+    colorThemes.forEach(themeOption =>{
+    themeOption.addEventListener('click',()=>{
+      storeTheme(themeOption.id);
+    });
+    });
+
+
+    //apply the theme
+
+    document.onload = retrieveTheme();
+
+    // Retrieve kids options from local storage
+    var kidsOptions = localStorage.getItem('name');
+    var kidsList = document.getElementById('kids-list');
+
+    if (kidsOptions) {
+        kidsOptions = JSON.parse(kidsOptions);
+
+        // Create and append option elements based on the retrieved data
+        kidsOptions.forEach(function(option) {
+            var li = document.createElement('li');
+            var label = document.createElement('label');
+            var input = document.createElement('input');
+            input.type = 'radio';
+            input.name = 'kids-item';
+            input.id = option.id;
+            input.title = option.title;
+
+            label.htmlFor = option.id;
+            label.textContent = option.title;
+
+            li.appendChild(input);
+            li.appendChild(label);
+
+            kidsList.appendChild(li);
+        });
+    } else {
+        // If there are no registered kids, display a message
+        var li = document.createElement('li');
+        li.textContent = 'No kids registered yet.';
+        kidsList.appendChild(li);
+    }
+    function validateForm(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Check if a course is selected
+        var courseSelected = document.querySelector('input[name="course-item"]:checked');
+        if (!courseSelected || courseSelected.id === 'course-default') {
+            alert("Please select a course.");
+            return;
+        }
+
+        // Check if a rating is selected
+        var ratingSelected = document.querySelector('input[name="rate"]:checked');
+        if (!ratingSelected) {
+            alert("Please select a rating.");
+            return;
+        }
+
+        // Get the selected course name and rating
+        var courseName = courseSelected.getAttribute('title');
+        var userRating = ratingSelected.value;
+
+        // Display the alert message
+        alert("Thank you for your feedback!\nYour rating for course " + courseName + " is " + userRating);
+
+        // Optionally, you can submit the form here
+        // document.querySelector('form').submit();
+
+
+
+    // Return to the previous page
+    history.back();
+                }
+</script>
+
+  
+
+
+ 
+</body>
+</html>

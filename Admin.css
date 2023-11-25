@@ -1,0 +1,392 @@
+
+
+
+
+.kisds_table .container label img{
+  position: absolute;
+  right:0%;
+  left:93%;
+  bottom: 0.1%;
+  flex-shrink: 0;
+  width:8%;
+  background-color: #fffcf2;  }
+  
+  #checked{
+  display: none;
+  }
+  
+  
+  .kid.appear {
+    display: none;
+  
+  }
+  #checked:checked ~ .kid.appear{
+  
+  display:flex;
+  
+  }
+
+  .kisds_table{
+    padding:1%;
+  position: relative;
+  width:80%;
+  display:flex;
+  align-self:center;
+  flex-direction: column;
+  margin:1%;
+  }
+  
+  .heading {
+  background-color:#d2ebeb;
+  
+  display:flex;
+  justify-content:left;
+  align-items:center;
+  padding-left: 2vw;
+  border-radius: 4%;
+  width:85%;
+  }
+  
+  
+  .container{
+  background-color:#fffcf2;
+  
+  
+  flex-wrap: wrap;
+  width: 85%;
+  padding:1vw ;
+  flex-shrink: 1;
+  position: relative;
+  }
+  
+  
+  .kid {
+  
+    display: inline-flex;
+    flex-wrap: wrap;
+    background-color:#eef2f3;
+    
+    justify-content:flex-start;
+    border-radius: 10%;
+    background-clip:content-box;
+    margin: 0.5%
+   
+  }
+  
+  
+  
+  .kid  h4 {
+    padding :3vw 1vw;
+  text-align: center;  
+  
+  
+  }
+  .container  img {
+  width:8vw;
+  float:left;
+  background-color:white;
+  background-clip: content-box;
+  
+  border-radius: 50%;
+  padding :1vw 1vw;
+  
+  }
+  
+  
+  
+  
+
+  
+  
+  
+  
+  .tutors_table{
+  width:80%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  }
+  
+  
+  .tutor_card{
+  background-color: #eef2f3;
+  background-clip:padding-box;
+  display:flex;
+  border-radius: 3vw;
+  width:fit-content;
+  margin: 0.5%;
+  
+  }
+  .tutor_info{
+    display:flex;
+    flex-direction: column;
+    padding :1vw 1vw;
+  }
+  
+  .tutor img{
+    
+  float:left;
+  padding :1vw 1vw;
+  
+  }
+  
+  .tutor_courses {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding:2vw;
+  background-color: #fffcf2;
+  background-clip: content-box;
+  height: fit-content;
+  }
+  .tutor_courses h4{
+  background-color:  #d2ebeb;
+
+  width:100%;
+  border-bottom:  0.3vw black solid;
+  text-align: center;
+  }
+  
+  .list{
+  list-style-position: inside;
+  list-style:none;
+  text-align:center;
+  padding:1vw;
+  font-weight:2;
+  text-indent: 3.5vw;
+
+  }
+  
+  
+  .list li{
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: 20% 100%,cover;
+    padding: 1%;
+  }
+  li.java{
+    background-image: url(images/coding-language-java.jpg);
+  
+  }
+  
+  li.python{
+    background-image: url(images/python.png);  
+  
+  }
+  li.robotics{
+    background-image: url(images/roboticimages.jpg);  
+  
+  }
+  li.c{
+  
+    background-image: url(images/C++.png);
+  }
+  
+  li.AI{
+  background-image: url(images/AI_course_image.jpg);  
+  
+  
+  }
+  
+  li.Front-end {
+    background-image: url(images/front-end-web.png);
+  }
+  li.scratsh{
+    background-image: url(images/Scratch-square-full.jpg);
+  
+  }
+  li.arduino{
+    background-image: url(images/technology-wallpaper1.jpg);
+  
+  }
+  li.Flutter{
+    background-image: url(images/flatterimage.png);
+  }
+  
+  .courses_table{
+    padding:1%;
+    width:80%;
+    margin: 0%;
+  align-self: center;    
+    }
+  
+  
+  
+  .courses_card{
+    background-color:#eef2f3;
+    background-clip: content-box;
+  flex-wrap: wrap;
+    display:flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  border-radius: 2%;
+  margin: 1%;
+  width:40%;
+  
+  
+  }
+  
+  
+  
+  .name{  
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 2%;
+  border-bottom: solid black 0.2vw;
+  justify-content: space-around;
+  }
+  
+  
+  
+  .courses_card img{
+  padding: 0%;
+  width:60%;
+  border: white 0.5vw solid;
+  border-radius: 2vw;
+  align-self:center;
+  margin-bottom: 2%;
+  
+  }
+  
+  .student h4{
+  background-color: #d2ebeb;
+  background-size: contain;
+  align-items: center;
+  padding: 1%;
+  
+  }
+  
+  
+  .student{
+    display:flex;
+    flex-direction: column;
+  background-color: #fffcf2;
+  width: 20vw;
+  align-self:  center;
+  padding:0%;
+  margin: 1%;
+ 
+  }
+  
+  .student .list li{
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-size: 10% 100%,cover;
+    text-indent: 10%;
+    padding:0.5% ;
+  text-align: center;
+  font-size:1.8vw;
+  }
+
+  .list .girl{
+  background-image: url(images/daughter.png);
+  
+  
+  }
+  
+  .list .boy{
+  background-image: url(images/son.png);
+  
+  }
+  
+  
+  
+  .courses_table .container label  img{
+    position: absolute;
+    right:0%;
+    left:93%;
+    bottom: 0.1%;
+    flex-shrink: 0;
+    background-color: #fffcf2;
+    width:7%
+    }
+  
+    #ch{
+    display: none;
+    }
+    
+    
+    .courses_card.appear {
+        display: none;
+    
+    }
+    #ch:checked ~ .courses_card.appear{
+    
+    display:flex;
+    
+    }
+    
+
+
+    
+    .btn{
+      
+      padding:0.5%;
+      border-width: 2px;
+        border-color: black;
+        border-radius: 20%;
+        margin:3% 50%;
+        width:7vw;
+        align-self: center;
+        font-size: 1.5vw;
+        
+      }
+
+
+.btn:hover{
+        border-radius: 20%;
+background-color: #d2ebeb;
+}
+
+#show h1{
+  text-decoration-line: underline;
+  text-align: left;
+}
+
+
+
+#show{
+  display: flex;
+  flex-direction: column;
+background-color:#fff4d0e9;
+width:fit-content;
+height:fit-content;
+align-self: center;
+border-radius: 10%;
+padding:2% 5%;
+transform: translate(-50%,-50%);
+border-style:outset;
+justify-content: space-around;
+position: relative;
+bottom: 50vh;
+right:-45vw;
+}
+
+
+.popup{
+  position: relative;
+  display: flex;
+  visibility: hidden;
+}
+
+
+#ok{
+ font-size: 40px;
+width:60px;
+height: fit-content;
+  position: absolute;
+margin:1%;
+top:-10px;
+right:-10px;
+  border: none;
+  border-radius: 20px;
+background-color: unset;
+color:#80207e;
+}
+
+
+
+
+

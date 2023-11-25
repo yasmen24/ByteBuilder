@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutor page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tutorsStyle.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" accesskey="h"><img src="images/ByteBuilder.PNG" alt="ByteBuilder's Logo" width="150" height="110"></a>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
+                    <li><a href="Parent.html" accesskey="p">Parents</a></li>
+                    <li><a href="Administrator.html" accesskey="a">Administrator</a></li>
+                    <li><a href="Tutors.html" accesskey="t">Tutors</a></li>
+                </ul> 
+             </nav>
+</header>
+
+
+    
+
+
+    <main>
+
+
+    <div class="breadcrumbss">
+        <ul class="breadcrumb">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Tutors.html">Tutors</a></li>
+        </ul>
+    </div>
+
+
+
+        <div class="Tutors">  
+                    <h2 >Our Tutors</h2>
+        </div>
+
+        
+
+        
+      <!--change theme -->
+      <form action="#" class="color-picker" style="display: none;">
+        <fieldset>
+          <legend class="visually-hidden"> pick a color scheme </legend>
+          <label for="light" class="visually-hidden"> light</label>
+          <input type="radio" name="theme" id="light" checked>
+  
+          <label for="dark" class="visually-hidden"> dark</label>
+          <input type="radio" name="theme" id="dark" >
+  
+  
+        </fieldset>
+       </form>
+  
+
+       <div class="sorting-section">
+        <h3>Please choose the sorting order for tutor names</h3><br>
+        <form>
+          <select name="Tutorname">
+            <option value="A-Z">A-Z</option>
+            <option value="Z-A">Z-A</option>
+          </select>
+        </form>
+      </div>
+
+
+
+
+
+        <div class="toturcontainer">
+           <div class="toturInfo">  
+                <img src="images/tutors1.PNG" alt=" tutors image ">
+                <div class="tutorinfo2">
+                <h3> Yasmen Al-suhaibani</h3>
+                <p>area of teaching :<br> java, python</p>
+                </div>
+            </div>
+
+            <div class="toturInfo">  
+                <img src="images/tutors2.PNG" alt=" tutors image ">
+                <div class="tutorinfo2">
+                <h3> Rama Fahad</h3>
+                <p>area of teaching :<br>  robotics, front end programming</p>
+                </div>
+            </div>
+
+
+            <div class="toturInfo">  
+                <img src="images/tutors3.PNG" alt=" tutors image ">
+                <div class="tutorinfo2">
+                <h3> Bashair Alsadhan</h3>
+                <p>area of teaching :<br>  robotics, AI</p>
+                </div>
+            </div>
+
+
+
+            <div class="toturInfo">  
+                <img src="images/tutors2.PNG" alt=" tutors image ">
+                <div class="tutorinfo2">
+                <h3> Maryam Altuwaijri  </h3>
+                <p>area of teaching :<br> full stack development</p>
+                </div>
+            </div>
+
+
+            <div class="toturInfo"> 
+                <img src="images/tutors1.PNG" alt=" tutors image ">
+                <div class="tutorinfo2">
+                <h3> Munira Al mogren </h3>
+                <p>area of teaching:<br> python, c++</p>
+                </div>
+            </div>
+
+
+          
+        
+
+        </div>    
+
+
+
+
+
+
+    </main>
+
+
+    
+   
+    <footer>
+        <div class="container">
+            <div class="col1"> <!--for the right most column*/-->
+                <h3>ByteBuilder's Story</h3>
+                <p>ByteBuilder embarked on a journey of innovation, shaping the digital realm with their visionary ideas.</p>
+            </div>
+    
+            <var></var>
+            
+            <div class="col2">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="tel:+0543080394"><img src="images/phone.png" alt="Phone call"> <span class="phone-number">0543080394</span></a></li>
+                    <li><a href="mailto:ByteBulider@info.com"><img src="images/email.png" alt="Email Message"> <span class="email-address">ByteBulider@info.com</span></a></li>
+                </ul>
+                <br>
+                <span>&copy; All rights reserved 2023-2024</span>
+
+            </div>
+    
+            <div class="col3"> <!--for the left most column*/-->
+                <h3>Address</h3>
+                <p>Saudi Arabia, Riyadh, King Saud University, Information Technology department IT312</p>
+                <br>
+                <br>
+        
+                <p>Privacy - Term</p>
+    
+            </div>
+        </div>
+        
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        
+        const tutorContainer = document.querySelector('.toturcontainer');
+        const sortingSelect = document.querySelector('select[name="Tutorname"]');
+
+        const tutors = [
+          { name: "Yasmen Al-suhaibani", image: "images/tutors1.PNG", description: " java, python" },
+          { name: "Rama Fahad", image: "images/tutors2.PNG", description:  "robotics, front end programming" },
+          { name: " Bashair Alsadhan", image: "images/tutors3.PNG" , description:  " robotics, AI" },
+          { name: "Maryam Altuwaijri", image: "images/tutors2.PNG", description: "full stack development" },
+          { name: " Munira Al mogren ", image:  "images/tutors1.PNG", description: " python, c++" }
+        ];
+
+        function renderTutors(order) {
+          const sortedTutors = order === 'A-Z' ?
+            tutors.slice().sort((a, b) => a.name.localeCompare(b.name)) :
+            tutors.slice().sort((a, b) => b.name.localeCompare(a.name));
+
+          tutorContainer.innerHTML = '';
+
+          sortedTutors.forEach(tutor => {
+            const tutorElement = document.createElement('div');
+            tutorElement.className = 'toturInfo';
+            tutorElement.innerHTML = `
+              <img src="${tutor.image}" alt="${tutor.name} tutor">
+              <h3 >${tutor.name}</h3>
+              <p>area of teaching: <br>${tutor.description}</p>
+            `;
+            tutorContainer.appendChild(tutorElement);
+          });
+        }
+        renderTutors(sortingSelect.value);
+        sortingSelect.addEventListener('change', function () {
+          renderTutors(this.value);
+        });
+      });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+<script>
+
+
+    const colorThemes=document.querySelectorAll('[name="theme"]');
+    
+
+    //store the theme
+
+    const storeTheme=function(theme){
+      localStorage.setItem("theme",theme);
+
+    };
+
+
+
+    //apply the theme
+
+    const retrieveTheme = function(){
+    const activeTheme = localStorage.getItem("theme");
+
+    colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme){
+      themeOption.checked = true;
+    }
+
+    });
+
+
+    };
+
+
+    colorThemes.forEach(themeOption =>{
+    themeOption.addEventListener('click',()=>{
+      storeTheme(themeOption.id);
+    });
+    });
+
+
+    //apply the theme
+
+    document.onload = retrieveTheme();
+
+
+
+ 
+</script>
+  
+
+    
+
+ 
+
+    
+</body>
+</html>

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses Enrollment page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Cenroll.css">
+
+
+    <script src="cEnroll.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Font Awesome Icon Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+<header>
+    <a href="index.html" class="logo" accesskey="h"><img src="images/ByteBuilder.PNG" alt="ByteBuilder's Logo"
+                                                         width="150" height="110"></a>
+    <nav class="navbar">
+        <ul>
+            <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
+            <li><a href="Parent.html" accesskey="p">Parents</a></li>
+            <li><a href="Administrator.html" accesskey="a">Administrator</a></li>
+            <li><a href="Tutors.html" accesskey="t">Tutors</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Parent.html">Parent</a></li>
+        <li><a href="CourseEnrolment.html">Course Enrolment</a></li>
+    </ul>
+
+
+    <!--change theme -->
+    <form action="#" class="color-picker" style="display: none;">
+        <fieldset>
+            <legend class="visually-hidden"> pick a color scheme</legend>
+            <label for="light" class="visually-hidden"> light</label>
+            <input type="radio" name="theme" id="light" checked>
+
+            <label for="dark" class="visually-hidden"> dark</label>
+            <input type="radio" name="theme" id="dark">
+
+
+        </fieldset>
+    </form>
+
+
+    <div class="enroll-container">
+
+
+        <div class="filter-container">
+
+            <select id="kidsFilter">
+                <option value="" selected disabled>Kid</option>
+                <option value="">All Kids</option>
+            </select>
+            <select id="tutorFilter">
+                <option value="" selected disabled>Tutor</option>
+                <option value="">All Tutors</option>
+            </select>
+
+            <select id="prerequisitesFilter">
+                <option value="" selected disabled>Prerequisites</option>
+                <option value="">All Prerequisites</option>
+            </select>
+        </div>
+
+            <div class="CoursesContainer">
+
+                <div class="course" data-tutor="Bashair alsadhan" data-prerequisites="Python programming">
+                    <div class="courseImage">
+                        <img src="images/AI_course_image.jpg" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course1" value="Ai">
+                        <label for="course1"></label>
+
+                        <h6>AI programming with python</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b>Bashair alsadhan</p>
+                        <p><b>Time:</b> 5:00pm to 9:00pm</p>
+                        <p><b>Days:</b> sunday and Monday </p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+
+                <div class="course" data-tutor="Rama fahad" data-prerequisites="">
+                    <div class="courseImage">
+                        <img src="images/technology-wallpaper1.jpg" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course2" value="orduaino">
+                        <label for="course2"></label>
+
+                        <h6>Let's learn arduino</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b>Rama fahad</p>
+                        <p><b>Time:</b> 4:00pm to 8:00pm</p>
+                        <p><b>Days:</b> Tuesday to Thursday</p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+                <div class="course" data-tutor="Maryam altuwaijri" data-prerequisites="Object-oriented programming">
+                    <div class="courseImage">
+                        <img src="images/coding-language-java.jpg" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course3" value="java">
+                        <label for="course3"></label>
+
+                        <h6>Java</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b> Maryam Altuwaijri</p>
+                        <p><b>Time:</b> 5:00pm to 11:00pm</p>
+                        <p><b>Days:</b> sunday and Wednesday</p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+
+
+                <div class="course" data-tutor="Munira Al mogren" data-prerequisites="Object-oriented programming">
+                    <div class="courseImage">
+
+                        <img src="images/flatterimage.png" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course4" value="flutter">
+                        <label for="course4"></label>
+
+                        <h6>Flutter</h6>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b>Munira Al mogren</p>
+                        <p><b>Time:</b> 3:00pm to 6:00pm</p>
+                        <p><b>Days:</b> sunday and Tuesday </p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+                <div class="course" data-tutor="Yasmen al-Suhaibani" data-prerequisites="Electronics">
+                    <div class="courseImage">
+
+                        <img src="images/roboticimages.jpg" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course5" value="robotics">
+                        <label for="course5"></label>
+
+
+                        <h6>robotics</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star "></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b>Yasmen Al-suhaibani</p>
+                        <p><b>Time:</b> 3:00pm to 7:00pm</p>
+                        <p><b>Days:</b> Monday and Tuesday </p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+                <div class="course" data-tutor="Rama fahad" data-prerequisites="">
+                    <div class="courseImage">
+
+                        <img src="images/Scratch-square-full.jpg" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course6" value="scratch">
+                        <label for="course6"></label>
+
+
+                        <h6>scratsh</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b>Rama fahad</p>
+                        <p><b>Time:</b> 5:00pm to 7:00pm</p>
+                        <p><b>Days:</b>Sunday and Monday </p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+
+                <div class="course" data-tutor="Bashair alsadhan" data-prerequisites="">
+                    <div class="courseImage">
+
+                        <img src="images/pythonomage.png" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course7" value="Python">
+                        <label for="course7"></label>
+
+
+                        <h6>python</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b>Bashair Alsadhan</p>
+                        <p><b>Time:</b> 5:00pm to 7:00pm</p>
+                        <p><b>Days:</b>Tuesday to Thursday </p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+                <div class="course" data-tutor="Maryam altuwaijri" data-prerequisites="HTML, CSS, JavaScript">
+                    <div class="courseImage">
+
+                        <img src="images/front-end-web.png" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course8" value="frontend">
+                        <label for="course8"></label>
+
+
+                        <h6>Front-end development</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b> Maryam Altuwaijri</p>
+                        <p><b>Time:</b> 3:00pm to 6:00pm</p>
+                        <p><b>Days:</b>Monday and Tuesday </p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+                <div class="course" data-tutor="Bashair alsadhan" data-prerequisites="Python programming">
+                    <div class="courseImage">
+                        <img src="images/AI_course_image.jpg" alt="course image">
+
+                    </div>
+
+
+                    <div class="courseAlreadyDisplayed">
+                        <input type="checkbox" name="course" id="course9" value="Ai">
+                        <label for="course9"></label>
+
+                        <h6>AI programming with python</h6>
+
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+
+                    </div>
+
+                    <div class="courseDetailsWhenHover">
+
+
+                        <p><b>Current tutor:</b>Bashair alsadhan</p>
+                        <p><b>Time:</b> 5:00pm to 9:00pm</p>
+                        <p><b>Days:</b> tuesday and thursday </p>
+
+                    </div>
+
+
+                </div> <!--end Course-->
+
+
+            </div> <!--end CoursesContainer-->
+
+        <div class="action">
+            <input id="enrollButton" type="submit" value="Enroll">
+        </div>
+        </div>
+</main>
+
+<footer>
+    <div class="footcontainer">
+        <div class="col1"> <!--for the right most column*/-->
+            <h3>ByteBuilder's Story</h3>
+            <p>ByteBuilder embarked on a journey of innovation, shaping the digital realm with their visionary
+                ideas.</p>
+        </div>
+
+        <var></var>
+
+        <div class="col2">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a style="text-decoration: none;" href="tel:+0543080394"><img src="images/phone.png"
+                                                                                  alt="Phone call"> <span
+                        class="phone-number">0543080394</span></a></li>
+                <li><a style="text-decoration: none;" href="mailto:ByteBulider@info.com"><img src="images/email.png"
+                                                                                              alt="Email Message"> <span
+                        class="email-address">ByteBulider@info.com</span></a></li>
+            </ul>
+            <span>&copy; All rights reserved 2023-2024</span>
+        </div>
+
+        <div class="col3"> <!--for the left most column*/-->
+            <h3>Address</h3>
+            <p>Saudi Arabia, Riyadh, King Saud University, Information Technology department IT312</p>
+            <p>Privacy - Term</p>
+
+        </div>
+    </div>
+
+</footer>
+
+
+<script>
+
+
+    const colorThemes = document.querySelectorAll('[name="theme"]');
+
+
+    //store the theme
+
+    const storeTheme = function (theme) {
+        localStorage.setItem("theme", theme);
+
+    };
+
+
+    //apply the theme
+
+    const retrieveTheme = function () {
+        const activeTheme = localStorage.getItem("theme");
+
+        colorThemes.forEach((themeOption) => {
+            if (themeOption.id === activeTheme) {
+                themeOption.checked = true;
+            }
+
+        });
+
+
+    };
+
+
+    colorThemes.forEach(themeOption => {
+        themeOption.addEventListener('click', () => {
+            storeTheme(themeOption.id);
+        });
+    });
+
+
+    //apply the theme
+
+    document.onload = retrieveTheme();
+
+    var courses = [
+        {
+            name: 'AI programming with Python',
+            tutor: 'Bashair alsadhan',
+            prerequisites: ['Python programming']
+        },
+        {
+            name: "Let's learn Arduino",
+            tutor: 'Rama fahad',
+            prerequisites: []
+        },
+        {
+            name: 'Java',
+            tutor: 'Maryam altuwaijri',
+            prerequisites: ['Object-oriented programming']
+        },
+        {
+            name: 'Flutter',
+            tutor: 'Munira Al mogren',
+            prerequisites: ['Object-oriented programming']
+        },
+        {
+            name: 'Robotics',
+            tutor: 'Yasmen al-Suhaibani',
+            prerequisites: ['Electronics']
+        },
+        {
+            name: 'Scratch',
+            tutor: 'Rama fahad',
+            prerequisites: []
+        },
+        {
+            name: 'Python',
+            tutor: 'Bashair alsadhan',
+            prerequisites: []
+        },
+        {
+            name: 'Front-end Development',
+            tutor: 'Maryam altuwaijri',
+            prerequisites: ['HTML', 'CSS', 'JavaScript']
+        },
+        {
+            name: 'AI programming with Python',
+            tutor: 'Bashair alsadhan',
+            prerequisites: ['Python programming']
+        }
+    ];
+    var tutors = [];
+    var prerequisites = [];
+
+    // Extract unique tutors and prerequisites from the courses array
+    for (var i = 0; i < courses.length; i++) {
+        var course = courses[i];
+
+        // Extract tutors
+        if (!tutors.includes(course.tutor)) {
+            tutors.push(course.tutor);
+        }
+
+        // Extract prerequisites
+        for (var j = 0; j < course.prerequisites.length; j++) {
+            var prerequisite = course.prerequisites[j];
+            if (!prerequisites.includes(prerequisite)) {
+                prerequisites.push(prerequisite);
+            }
+        }
+    }
+    // Populate the filter options for kids
+    var kidsFilter = document.getElementById("kidsFilter");
+
+    // Remove existing options
+    kidsFilter.innerHTML = '';
+
+    var labelKidsOption = document.createElement("option");
+    labelKidsOption.value = "";
+    labelKidsOption.textContent = "Kids";
+    kidsFilter.appendChild(labelKidsOption);
+
+    var kids = localStorage.getItem("names");
+
+    if (kids) {
+        kids = JSON.parse(kids);
+
+        for (var i = 0; i < kids.length; i++) {
+            var kidOption = document.createElement("option");
+            kidOption.value = kids[i];
+            kidOption.textContent = kids[i];
+            kidsFilter.appendChild(kidOption);
+        }
+    } else {
+        var noKidsOption = document.createElement("option");
+        noKidsOption.value = "";
+        noKidsOption.textContent = "No registered kids yet";
+        noKidsOption.disabled = true;
+        kidsFilter.appendChild(noKidsOption);
+    }
+
+    // Disable label option
+    labelKidsOption.disabled = true;
+    labelKidsOption.style.fontStyle = "italic";
+
+
+
+    // Populate the filter options for tutors
+    var tutorFilter = document.getElementById("tutorFilter");
+
+    // Remove existing options
+    tutorFilter.innerHTML = '';
+
+    var labelTutorOption = document.createElement("option");
+    labelTutorOption.value = "";
+    labelTutorOption.textContent = "Tutors";
+    tutorFilter.appendChild(labelTutorOption);
+
+
+    for (var i = 0; i < tutors.length; i++) {
+        var tutorOption = document.createElement("option");
+        tutorOption.value = tutors[i];
+        tutorOption.textContent = tutors[i];
+        tutorFilter.appendChild(tutorOption);
+    }
+
+    // Disable label option
+    labelTutorOption.disabled = true;
+    labelTutorOption.style.fontStyle = "italic";
+
+
+
+
+
+    // Populate the filter options for prerequisites
+    var prerequisitesFilter = document.getElementById("prerequisitesFilter");
+
+    // Remove existing options
+    prerequisitesFilter.innerHTML = '';
+
+    var labelPrerequisitesOption = document.createElement("option");
+    labelPrerequisitesOption.value = "";
+    labelPrerequisitesOption.textContent = "Prerequisites";
+    prerequisitesFilter.appendChild(labelPrerequisitesOption);
+
+    var prerequisiteSet = new Set(); // Use a Set to store unique prerequisites
+
+    var coursesWithNoPrerequisites = [];
+
+    for (var i = 0; i < courses.length; i++) {
+        var course = courses[i];
+        var prerequisites = course.prerequisites;
+
+        if (prerequisites.length === 0) {
+            coursesWithNoPrerequisites.push(course);
+        }
+
+        for (var j = 0; j < prerequisites.length; j++) {
+            var prerequisite = prerequisites[j].trim();
+
+            if (prerequisite !== "" && !prerequisiteSet.has(prerequisite)) {
+                prerequisiteSet.add(prerequisite);
+
+                var prerequisiteOption = document.createElement("option");
+                prerequisiteOption.value = prerequisite;
+                prerequisiteOption.textContent = prerequisite;
+                prerequisitesFilter.appendChild(prerequisiteOption);
+            }
+        }
+    }
+
+    // Add "None" option if there are courses with no prerequisites
+    if (coursesWithNoPrerequisites.length > 0) {
+        var noneOption = document.createElement("option");
+        noneOption.value = "none";
+        noneOption.textContent = "None";
+        prerequisitesFilter.appendChild(noneOption);
+    }
+
+    // Disable label option
+    labelPrerequisitesOption.disabled = true;
+    labelPrerequisitesOption.style.fontStyle = "italic";
+
+    // Add event listener to handle filter changes
+    prerequisitesFilter.addEventListener("change", function () {
+        var selectedPrerequisite = prerequisitesFilter.value;
+
+        if (selectedPrerequisite === "none") {
+            displayCoursesWithNoPrerequisites();
+        } else {
+            displayCoursesWithPrerequisite(selectedPrerequisite);
+        }
+    });
+
+    // Function to display courses with no prerequisites
+    function displayCoursesWithNoPrerequisites() {
+        var filteredCourses = courses.filter(function (course) {
+            return course.prerequisites.length === 0;
+        });
+
+        // Display filtered courses
+        console.log(filteredCourses);
+    }
+
+    // Function to display courses with a specific prerequisite
+    function displayCoursesWithPrerequisite(prerequisite) {
+        var filteredCourses = courses.filter(function (course) {
+            return course.prerequisites.includes(prerequisite);
+        });
+
+        // Display filtered courses
+        console.log(filteredCourses);
+    }
+
+
+
+
+
+
+
+
+    // Add event listeners to the filter options
+    var tutorFilter = document.getElementById("tutorFilter");
+    tutorFilter.addEventListener("change", filterCourses);
+
+    var prerequisitesFilter = document.getElementById("prerequisitesFilter");
+    prerequisitesFilter.addEventListener("change", filterCourses);
+    var enrollButton = document.getElementById("enrollButton");
+    enrollButton.addEventListener("click", validateForm);
+
+    // Form validation function
+    function validateForm(event) {
+        event.preventDefault(); // Prevent form submission
+
+        var childrenNames = JSON.parse(localStorage.getItem("name"));
+        var selectedChildren = document.querySelectorAll('input[name="selectedChildren"]:checked');
+        var selectedCourses = document.querySelectorAll('input[name="selectedCourses"]:checked');
+
+        if (selectedChildren.length === 0) {
+            alert("Please select at least one child.");
+            return;
+        }
+
+        if (selectedCourses.length === 0) {
+            alert("Please select at least one course.");
+            return;
+        } // Clear previous information
+        var enrollmentInfo = document.getElementById("enrollmentInfo");
+        enrollmentInfo.innerHTML = "";
+
+        // Display new information
+        var childName = selectedChildren[0].value; // Assuming only one child can be selected
+
+        var coursesInfo = "<h2>Enrollment Information</h2>";
+        coursesInfo += "<p>Child: " + childName + "</p>";
+        coursesInfo += "<ul>";
+
+        selectedCourses.forEach(function (course) {
+            var courseName = course.value;
+            var tutor = course.parentNode.querySelector(".courseTutor").textContent;
+
+            coursesInfo += "<li>" + courseName + " (Tutor: " + tutor + ")</li>";
+        });
+
+        coursesInfo += "</ul>";
+
+        enrollmentInfo.innerHTML = coursesInfo;
+
+        // Clear the form
+        var form = document.getElementById("enrollmentForm");
+        form.reset();
+    }
+
+</script>
+
+
+</body>
+</html>
+<!--                            <div class="col-9">-->
+<!--                                <div class="filter-row row">-->
+<!--                                    <div class="col-sm-12 col-lg-4">-->
+<!--                                        <div class="filter_kids">-->
+<!--                                            <details class="kids-dropdown">-->
+<!--                                                <summary class="kids-radios">-->
+<!--                                                    <input type="radio" name="kids-item" id="kids-default" title="Kids"-->
+<!--                                                           checked>-->
+<!--                                                    <input type="radio" name="kids-item" id="kids-item1"-->
+<!--                                                           title="Taleen Alshebel">-->
+<!--                                                    <input type="radio" name="kids-item" id="kids-item2"-->
+<!--                                                           title="Rayan Alshebel">-->
+<!--                                                </summary>-->
+<!--                                                <ul class="list">-->
+<!--                                                    <li>-->
+<!--                                                        <label for="kids-item1">Taleen Alshebel</label>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        <label for="kids-item2">Rayan Alshebel</label>-->
+<!--                                                    </li>-->
+<!--                                                </ul>-->
+<!--                                            </details>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 col-lg-4">-->
+<!--                                        <div class="filter_tuts">-->
+<!--                                            <details class="tuts-dropdown">-->
+<!--                                                <summary class="tuts-radios">-->
+<!--                                                    <input type="radio" name="tuts-item" id="tuts-default"-->
+<!--                                                           title="Tutors" checked>-->
+<!--                                                    <input type="radio" name="tuts-item" id="tuts-item1"-->
+<!--                                                           title="Yasmen alsuhaibani">-->
+<!--                                                    <input type="radio" name="tuts-item" id="tuts-item2"-->
+<!--                                                           title="Rama fahad">-->
+<!--                                                    <input type="radio" name="tuts-item" id="tuts-item3"-->
+<!--                                                           title="Bashair alsadhan">-->
+<!--                                                    <input type="radio" name="tuts-item" id="tuts-item4"-->
+<!--                                                           title="Maryam altuwaijri">-->
+<!--                                                    <input type="radio" name="tuts-item" id="tuts-item5"-->
+<!--                                                           title="Munira almogren">-->
+<!--                                                </summary>-->
+<!--                                                <ul class="list">-->
+<!--                                                    <li>-->
+<!--                                                        <label for="tuts-item1">Yasmen alsuhaibani<span></span></label>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        <label for="tuts-item2">Rama fahad</label>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        <label for="tuts-item3">Bashair alsadhan</label>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        <label for="tuts-item4">Maryam altuwaijri</label>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        <label for="tuts-item5">Munira almogren</label>-->
+<!--                                                    </li>-->
+<!--                                                </ul>-->
+<!--                                            </details>-->
+<!--                                        </div>-->
+
+<!--                                    </div>-->
+<!--                                    <div class="col-sm-12 col-lg-4">-->
+<!--                                        <div class="filter_prereq">-->
+<!--                                            <details class="prereq-dropdown">-->
+<!--                                                <summary class="prereq-radios">-->
+<!--                                                    <input type="radio" name="prereq-item" id="prereq-default"-->
+<!--                                                           title="Prerequisites"-->
+<!--                                                           checked>-->
+<!--                                                    <input type="radio" name="prereq-item" id="prereq-item1"-->
+<!--                                                           title="None">-->
+<!--                                                    <input type="radio" name="prereq-item" id="prereq-item2"-->
+<!--                                                           title="Programming fundamentals">-->
+<!--                                                </summary>-->
+<!--                                                <ul class="list">-->
+<!--                                                    <li>-->
+<!--                                                        <label for="prereq-item1">None</label>-->
+<!--                                                    </li>-->
+<!--                                                    <li>-->
+<!--                                                        <label for="prereq-item2">Programming fundamentals</label>-->
+<!--                                                    </li>-->
+
+<!--                                                </ul>-->
+<!--                                            </details>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+
+<!--                                </div>-->
+<!--                            </div>-->

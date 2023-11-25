@@ -1,0 +1,185 @@
+
+
+
+
+.register{
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  color: #f7774c;
+  font-family: 'Courier New', Courier, monospace;
+  padding-top:10%;
+  font-weight: bold;
+  margin-bottom:30px ;
+  margin-top:20px;
+  background-image: 
+  linear-gradient(to bottom, rgba(255, 255, 255, 0.52), rgba(209, 209, 209, 0.274)),
+  url('images/registerkid.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  border-style:groove;
+  
+}
+
+form{
+  background: rgba(255, 255, 255, 0.605);
+  width: 640px;
+  margin: 50px auto;
+  max-width: 97%;
+  border-radius: 4px;
+  padding: 55px 30px;
+  box-shadow: 1px 1px 8px 1px rgb(219, 219, 206);
+}
+
+
+form .title {
+  letter-spacing: 2px;
+  border-bottom: 1px solid rgb(218, 159, 41);
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 32px;
+}
+
+
+form .item{
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 24px;
+  width: 48%;
+}
+
+
+form label{
+  display: block;
+  margin-bottom: 16px;
+  font-size: 1.1em;
+  font-weight: 500;
+}
+
+
+form .item input{
+  border-radius: 4px;
+  border: 1px solid rgb(255, 219, 154);
+  outline: 0;
+  padding: 16px;
+  width: 100%;
+  height: 44px;
+  background: transparent;
+  font-size: 17px;
+  transition: background-color 0.2s;
+}
+
+
+form .action {
+  display: flex;
+  justify-content: center;
+}
+
+
+form .action input{
+  box-sizing: border-box;
+  font-size: 1.3em;
+  font-weight: 600;
+  border-radius:10px;
+  border-style: solid;
+  background-color:rgb(255, 219, 154);
+  border-color: rgb(255, 219, 154);
+  padding: 10px 25px;
+  margin-top: 25px;
+  letter-spacing: 3px;
+  color: rgb(68, 49, 15);
+  text-align: center;
+  transition: all 0.3S ease;
+}
+
+
+form .item input:focus {
+  box-shadow: 1px 1px 5px 1px rgb(219, 219, 206);
+}
+
+
+form .action input:hover{
+  background: rgb(247, 203, 120);
+  color: rgb(29, 20, 5); ;
+  box-shadow: 1px 1px 5px 1px rgb(219, 219, 206);
+}
+
+
+form .action input:active{
+  transform: scale(0.9);
+  box-shadow: 1px 1px 8px 1px rgb(219, 219, 206);
+}
+
+
+form .item input:hover{
+background: rgba(255, 225, 182, 0.639);
+}
+
+
+
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 10px 0;
+
+  cursor: pointer;
+  transition: .2s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: rgba(255, 225, 182, 0.639);
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 22px;
+  height: 22px;
+  border-radius: 100px;
+  background: rgb(255, 185, 87);
+  position: relative;
+}
+
+.rad-design::before {
+  content: '';
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: .2s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 0%);
+  margin-left: 14px;
+  font-size: 0.9em;
+  font-weight: 400;
+  transition: .2s;
+}
+
+
+
+

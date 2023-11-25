@@ -1,0 +1,142 @@
+
+
+/* Style the list 
+ul.breadcrumb {
+    padding: 30px 30px;
+    list-style: none;
+    
+  } */
+ 
+  /* Display list items side by side 
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+*/
+  /* Add a slash symbol (/) before/behind each list item 
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+  }
+*/
+  /* Add a color to all links inside the list 
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }*/
+
+  /* Add a color on mouse-over 
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+    text-decoration: underline;
+  }*/
+
+
+
+
+  .Our-Courses{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    color: #f7774c;
+    font-family: 'Courier New', Courier, monospace;
+    padding-top:12%;
+    font-weight: bold;
+    margin-bottom:30px ;
+    
+    /*background-image: url(images/courseimage.jpg);*/
+    background-image: linear-gradient(rgba(255, 255, 255, 0.6)100%, transparent), url(images/courseimage.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 50vh;
+    border-radius: 5px;
+    box-shadow:1px 2px 1px #e8e9e9;
+    
+    
+  }
+
+
+
+  .CoursesContainer{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 5em;
+
+  }
+
+  .course{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 3px 4px 2px #c5e0e1;
+    height: 31em ;
+    /*min-height: 13em;*/
+    width:23em;
+    overflow: hidden;
+    margin:2em;
+    transition: 0.6s ease;
+  
+  }
+
+  .course:hover{
+    transform: scale(1.075);
+  }
+
+  .courseImage img{
+    width: 100%;
+   
+  }
+
+  .course:hover .courseImage{
+    opacity: 0.88;
+  }
+
+  .courseAlreadyDisplayed .courseDetailsWhenHover{
+    padding: 4em;
+  }
+
+  .courseAlreadyDisplayed{
+    text-transform: uppercase;
+    text-align: center;
+    margin: 2em;
+
+
+  }
+
+  .course:hover{
+    height: 53em;
+  }
+
+   
+  .courseDetailsWhenHover{
+    padding:0 0.8em;
+  }
+
+ /*
+  .courseAlreadyDisplayed:hover + .courseDetailsWhenHover{
+    display: block;
+    
+  }*/
+
+
+  .courseDetailsWhenHover ul{
+    list-style-position: outside;
+    padding-left: 1.5em;
+  }
+
+
+
+
+
+
+/*style the rating*/
+.checked {
+    color: orange;
+  }
+
+

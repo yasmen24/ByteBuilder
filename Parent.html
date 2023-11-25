@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="parentStyle.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo" accesskey="h"><img src="images/ByteBuilder.PNG" alt="ByteBuilder's Logo" width="150" height="110"></a>
+            <nav class="navbar">
+                <ul>
+                 <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
+                 <li><a href="Parent.html" accesskey="p">Parents</a></li>
+                 <li><a href="Administrator.html" accesskey="a">Administrator</a></li>
+                 <li><a href="Tutors.html" accesskey="t">Tutors</a></li>
+                </ul> 
+             </nav>
+</header>
+
+
+    <ul class="breadcrumb">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Parent.html">Parents</a></li>
+    </ul>
+
+
+    <div class="parent">  
+        <h2 >Parent Dashboard</h2>
+    </div>
+
+
+    
+        
+      <!--change theme -->
+      <form action="#" class="color-picker" style="display: none;">
+        <fieldset>
+          <legend class="visually-hidden"> pick a color scheme </legend>
+          <label for="light" class="visually-hidden"> light</label>
+          <input type="radio" name="theme" id="light" checked>
+  
+          <label for="dark" class="visually-hidden"> dark</label>
+          <input type="radio" name="theme" id="dark" >
+  
+  
+        </fieldset>
+       </form>
+  
+
+    <h1 id="mykids">My Kids:</h1>
+    <div class="kidscontainer">
+
+       
+            <div class="kidinfo">
+                <a href="Register.html">
+                    <img src="images/addkid.png" alt="add kid">
+                    <h3>Register a new kid</h3>
+                </a>
+            </div> 
+        
+
+        <div class="kidinfo">  
+            <img src="images/son.png" alt="kid image">
+            <h3> Rayan Alshebel</h3>
+        </div>
+       
+
+
+        <div class="kidinfo">  
+            <img src="images/daughter.png" alt="kid image">
+        <h3> Taleen Alshebel</h3>
+        </div>
+
+
+
+        <div class="new">
+            <h3 class="childNameDisplay"></h3>
+        </div>
+    </div>
+
+        <script src="displayChild.js"></script>
+        <script> window.onload = displayChildName;</script>
+
+
+
+
+        <div class="buttons">
+        <a href="CourseEnrolment.html">
+            <div class="cardbutton enroll">
+                <h5>Course Enrollement</h5>
+            </div>
+        </a>
+
+        <a href="evaluation.html">
+            <div class="cardbutton eval">
+                <h5>Course Evaluation</h5>
+            </div>
+        </a>
+        </div>
+
+
+    
+<footer>
+    <div class="container">
+        <div class="col1"> <!--for the right most column*/-->
+            <h3>ByteBuilder's Story</h3>
+            <p>ByteBuilder embarked on a journey of innovation, shaping the digital realm with their visionary ideas.</p>
+        </div>
+
+        <var></var>
+        
+        <div class="col2">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="tel:+0543080394"><img src="images/phone.png" alt="Phone call"> <span class="phone-number">0543080394</span></a></li>
+                <li><a href="mailto:ByteBulider@info.com"><img src="images/email.png" alt="Email Message"> <span class="email-address">ByteBulider@info.com</span></a></li>
+            </ul>
+            
+            <br>
+            <span>&copy; All rights reserved 2023-2024</span>
+
+        </div>
+
+        <div class="col3"> <!--for the left most column*/-->
+            <h3>Address</h3>
+            <p>Saudi Arabia, Riyadh, King Saud University, Information Technology department IT312</p>
+            <br>
+            <br>
+    
+            <p>Privacy - Term</p>
+
+        </div>
+    </div>
+    
+</footer>
+
+
+   
+<script>
+
+
+    const colorThemes=document.querySelectorAll('[name="theme"]');
+    
+
+    //store the theme
+
+    const storeTheme=function(theme){
+      localStorage.setItem("theme",theme);
+
+    };
+
+
+
+    //apply the theme
+
+    const retrieveTheme = function(){
+    const activeTheme = localStorage.getItem("theme");
+
+    colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme){
+      themeOption.checked = true;
+    }
+
+    });
+
+
+    };
+
+
+    colorThemes.forEach(themeOption =>{
+    themeOption.addEventListener('click',()=>{
+      storeTheme(themeOption.id);
+    });
+    });
+
+
+    //apply the theme
+
+    document.onload = retrieveTheme();
+
+
+
+ 
+</script>
+  
+
+ 
+</body>
+</html>

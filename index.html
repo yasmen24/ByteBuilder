@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="script.js"></script>
+
+  <title>Home page</title>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo" accesskey="h"><img src="images/ByteBuilder.PNG" alt="ByteBuilder's Logo" width="150" height="110"></a>
+    <nav class="navbar">
+      <ul>
+        <li><a href="Courses.html" accesskey="c">Current Courses</a></li>
+        <li><a href="Parent.html" accesskey="p">Parents</a></li>
+        <li><a href="Administrator.html" accesskey="a">Administrator</a></li>
+        <li><a href="Tutors.html" accesskey="t">Tutors</a></li>
+      </ul>
+    </nav>
+    <button class="menu-button">&#9776;</button>
+  </header>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.querySelector('.menu-button');
+    const navbar = document.querySelector('.navbar');
+  
+    menuButton.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  });
+</script>
+  <main>
+
+ 
+
+
+    <div class="vision">
+       <!-- <img src="images/visionImage.webp" alt="visionary"> -->
+        <h3 class="title">Our Vision</h3>
+        <p>ByteBuilder is a new frontier in children's education, where learning becomes a captivating adventure. Through interactive games and engaging content, we inspire curiosity, foster creativity, and empower young minds to explore and thrive in a digital world. Join us on this exciting journey of discovery and unlock the joy of learning for every child.</p>
+    </div>
+    <div>
+     
+      <!--change theme -->
+      <form action="#" class="color-picker">
+       <fieldset>
+         <legend class="visually-hidden"> pick a color scheme </legend>
+         <label for="light" class="visually-hidden"> light</label>
+         <input type="radio" name="theme" id="light" checked>
+ 
+         <label for="dark" class="visually-hidden"> dark</label>
+         <input type="radio" name="theme" id="dark" >
+ 
+ 
+       </fieldset>
+      </form>
+ 
+     </div>
+
+
+
+   
+    <section class="courses">
+      <h2 class="title">Courses</h2>
+      <div class="content">
+        <div class="course-card">
+          <div class="courses-image">
+            <img src="images/coding-language-java.jpg" alt="java course" >
+          </div>
+          <div class="course-info">
+            <strong class="course-title">
+              <span>Java</span>
+            </strong>
+            <p class="courses-desc">Dive into the world of coding with our fun and interactive course! Learn the fundamentals of Java programming through exciting projects and unleash your creativity.</p>
+
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="courses-image">
+            <img src="images/roboticimages.jpg" alt="robotic course" >
+          </div>
+          <div class="course-info">
+            <strong class="course-title">
+              <span>Robotics</span>
+            </strong>
+            <p class="courses-desc">Let your child Explore the fascinating world of robots through hands-on learning! Build and program robots, unleash your problem-solving skills, and ignite your imagination.</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="courses-image">
+            <img src="images/front-end-web.png" alt="front-end-web course" >
+          </div>
+          <div class="course-info">
+            <strong class="course-title">
+              <span>Front-end-web</span>
+            </strong>
+            <p class="courses-desc">Let your child Step into the world of web development! Learn HTML, CSS, and JavaScript to create stunning websites and interactive user experiences.</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="courses-image">
+            <img src="images/Scratch-square-full.jpg" alt="Scratch course" >
+          </div>
+          <div class="course-info">
+            <strong class="course-title">
+              <span>Scratch</span>
+            </strong>
+            <p class="courses-desc">Let your kids Unleash their creativity and learn coding with Scratch! Dive into a world of colorful blocks and interactive projects.</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="courses-image">
+            <img src="images/pythonomage.png" alt="python course" >
+          </div>
+          <div class="course-info">
+            <strong class="course-title">
+              <span>Python</span>
+            </strong>
+            <p class="courses-desc">Embark on a coding journey with Python! Discover the power of this versatile language as you learn to write programs, create games, and solve puzzles</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+          </div>
+        </div>
+
+        <div class="course-card">
+          <div class="courses-image">
+            <img src="images/flatterimage.png" alt="flatter course" >
+          </div>
+          <div class="course-info">
+            <strong class="course-title">
+              <span>Flutter</span>
+            </strong>
+            <p class="courses-desc">Let your child master Flutter and build beautiful, cross-platform mobile applications with a single codebase.</p>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+          </div>
+        </div>
+        
+        
+      </div>
+    </section>
+
+    <hr>
+
+    <section id="parent-rate">
+      <div class="parent-rate-heading">
+        <h3 class="title">Parents Says:</h3>
+      </div>
+      <!--parents rate container-->
+      <div class="rateContainer">
+        <!--box1-->
+        <div class="parentBox">
+          <!--top-->
+          <div class="box-top">
+            <!--profile-->
+            <div class="profile">
+              <!--profileImage-->
+              <div class="profileImage">
+                <img src="images/parent1.png" alt="parent image">
+              </div>
+              <!--name-->
+              <div class="name-user">
+                <strong>Faisal Abdulaziz</strong>
+              </div>
+            </div>
+
+            <!--reviews-->
+            <div class="reviews">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star"></i>
+            </div>
+                
+
+          </div>
+
+          <!--Comment-->
+          <div class="parent-comment">
+            <p>I found an amazing learning website for my child, offering engaging resources and a user-friendly interface to enhance their education.</p>
+          </div>
+
+        </div>
+
+        <!--box2-->
+        <div class="parentBox">
+          <!--top-->
+          <div class="box-top">
+            <!--profile-->
+            <div class="profile">
+              <!--profileImage-->
+              <div class="profileImage">
+                <img src="images/parent2.png" alt="parent image">
+              </div>
+              <!--name-->
+              <div class="name-user">
+                <strong>Manar Othman</strong>
+              </div>
+            </div>
+
+            <!--reviews-->
+            <div class="reviews">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+            </div>
+                
+
+          </div>
+
+          <!--Comment-->
+          <div class="parent-comment">
+            <p>I'm thrilled with the learning website I stumbled upon for my child! It offers captivating educational materials, making learning a delightful and seamless experience.</p>
+          </div>
+
+        </div>
+
+        <!--box3-->
+        <div class="parentBox">
+          <!--top-->
+          <div class="box-top">
+            <!--profile-->
+            <div class="profile">
+              <!--profileImage-->
+              <div class="profileImage">
+                <img src="images/parent3.png" alt="parent image">
+              </div>
+              <!--name-->
+              <div class="name-user">
+                <strong>Hend Jaber</strong>
+              </div>
+            </div>
+
+            <!--reviews-->
+            <div class="reviews">
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+              <i class="fa fa-star checked"></i>
+            </div>
+                
+
+          </div>
+
+          <!--Comment-->
+          <div class="parent-comment">
+            <p>I am absolutely thrilled with the learning website I came across for my child! It offers a vast range of captivating educational resources that have made learning an enjoyable and enriching experience. I couldn't be happier with the quality and effectiveness of this platform.
+
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+</main>
+
+<hr>
+
+  <footer>
+    <div class="footcontainer">
+        <div class="col1"> <!--for the right most column*/-->
+            <h3>ByteBuilder's Story</h3>
+            <p>ByteBuilder embarked on a journey of innovation, shaping the digital realm with their visionary ideas.</p>
+        </div>
+
+        <var></var>
+        
+        <div class="col2">
+            <h3>Contact us</h3>
+            <ul>
+                <li><a href="tel:+0543080394"><img src="images/phone.png" alt="Phone call"> <span class="phone-number">0543080394</span></a></li>
+                <li><a href="mailto:ByteBulider@info.com"><img src="images/email.png" alt="Email Message"> <span class="email-address">ByteBulider@info.com</span></a></li>
+            </ul>
+            <span>&copy; All rights reserved 2023-2024</span>
+        </div>
+
+        <div class="col3"> <!--for the left most column*/-->
+            <h3>Address</h3>
+            <p>Saudi Arabia, Riyadh, King Saud University, Information Technology department IT312</p>
+            <p>Privacy - Term</p>
+
+        </div>
+    </div>
+    
+</footer>
+
+
+<script>
+
+
+  const colorThemes=document.querySelectorAll('[name="theme"]');
+  
+
+  //store the theme
+
+  const storeTheme=function(theme){
+    localStorage.setItem("theme",theme);
+
+  };
+
+
+
+  //apply the theme
+
+  const retrieveTheme = function(){
+  const activeTheme = localStorage.getItem("theme");
+
+  colorThemes.forEach((themeOption) => {
+  if (themeOption.id === activeTheme){
+    themeOption.checked = true;
+  }
+
+  });
+
+
+  };
+
+
+  colorThemes.forEach(themeOption =>{
+  themeOption.addEventListener('click',()=>{
+    storeTheme(themeOption.id);
+  });
+  });
+
+
+  //apply the theme
+
+  document.onload = retrieveTheme();
+
+
+
+
+</script>
+  
+</body>
+</html>

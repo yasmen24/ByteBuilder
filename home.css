@@ -1,0 +1,415 @@
+
+main{
+  margin-bottom: 20px;
+}
+.vision {
+  display: flex;
+  width: 100%;
+  min-height: 50vh;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center; /* Added */
+  align-items: center;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.6) 100%, transparent), url(images/visionImage.webp);
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.title{
+  color: rgb(216, 130, 0);
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.vision p{
+  font-size: 1.5em;
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+ 
+}
+
+.courses{
+  margin-top: 20px;
+
+}
+.courses .content{
+  margin-top: 30px;
+}
+
+.course-card{
+  border: 1px solid rgb(0, 0, 0);
+  box-shadow: 3px 4px 2px #c5e0e1;
+  background-color: white;
+  min-height: 14em;
+  width: 20em;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 20px;
+  transition: 0.7s ease;
+}
+
+.course-card:hover{
+  transform: scale(1.1);
+}
+
+.course-card:hover .courses-image{ 
+  opacity: 0.8;
+}
+
+.courses-image img{
+  width: 100%;
+}
+
+.course-info{
+  padding: 1em;
+}
+
+.courses-desc{
+  font-size: 0.8em;
+}
+
+.course-title{
+  margin-bottom: 80px;
+  font-size: 1.1em;
+}
+
+.checked {
+color: orange;
+}
+
+.rating {
+margin-top: 1px;
+font-size: 1.6em;
+}
+
+#parent-rate{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+width: 100%;
+}
+
+.parent-rate-heading{
+letter-spacing: 1px;
+margin: 30px 0px;
+padding: 10px 20px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.rateContainer{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+width: 100%;
+}
+
+.parentBox{
+width: 500px;
+box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.107);
+background-color: white;
+padding: 20px;
+margin: 15px;
+transition: 0.6s ease
+}
+
+.profileImage{
+width: 50px;
+min-height: 50px;
+border-radius: 80%;
+overflow: hidden;
+margin-right: 10px;
+}
+
+.profileImage img{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.profile{
+display: flex;
+align-items: center;
+}
+
+.name-user{
+display: flex;
+flex-direction: column;
+}
+
+
+
+.name-user strong{
+color: rgb(31, 31, 31);
+font-size: 1.1rem;
+letter-spacing: 0.5px;
+}
+
+.box-top{
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 20px;
+
+}
+
+.parentBox:hover{
+transform: scale(1.1);
+}
+
+.star {
+color: rgb(255, 196, 0);
+}
+
+
+@media (max-width: 1024px) {
+  .vision {
+    min-height: 40vh; 
+  }
+  .title{
+    font-size: 3em;
+  }
+
+  .vision p{
+    font-size: 1.7em;
+  }
+}
+
+@media (max-width: 743px) {
+
+
+  .title{
+    font-size: 1.6em;
+  }
+
+  .vision {
+    min-height: 40vh;
+  } 
+
+  .vision p{
+    font-size: 1.3em;
+  }
+
+  .course-card{
+    width: 12em;
+  }
+
+  .courses-desc{
+    font-size: 0.8em;
+  }
+  
+  .course-title{
+    font-size: 1em;
+  }
+
+  .course-info.fa {
+    font-size: 100px; 
+  }
+
+  
+}
+
+@media (max-width: 696px) {
+  .vision {
+    min-height: 40vh; 
+  }
+
+  .course-card{
+    width: 15rem;
+  }
+
+  .parentBox {
+    width: 70%;
+    height: auto;
+  }
+
+}
+
+  
+@media (max-width: 618px) {
+
+  .title{
+    font-size: 1.4em;
+  }
+
+  .vision p{
+    font-size: 1.2em;
+  }
+
+  .vision {
+    min-height: 35vh; 
+  }
+
+  .course-card{
+    width: 15em;
+  }
+
+   .name-user strong {
+    font-size: .9rem;
+  }
+
+  .parent-comment {
+    font-size: .8rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .vision {
+    min-height: 30vh; 
+  }
+  .course-card{
+    width: 14em;
+  }
+}
+
+@media (max-width: 530px) {
+  .course-card{
+    width: 13em;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .course-card{
+    width: 11em;
+  }
+
+  .courses-desc{
+    font-size: 0.7em;
+  }
+    
+  .course-title{
+    font-size: .9em;
+  }
+
+  .title{
+    font-size: 1.4em;
+  }
+
+  .vision {
+    min-height: 25vh;
+  } 
+
+  .vision p{
+    font-size: 1em;
+  }
+
+  .parentBox {
+    width: 70%;
+    height: auto;
+  }
+
+  .name-user strong {
+    font-size: .8rem;
+  }
+
+  .parent-comment {
+    font-size: .7rem;
+  }
+
+  .course-card .fa-star {
+    font-size: .8rem;
+  }
+}  
+
+  @media screen and (max-width: 470px) {
+   
+  
+    .parent-comment p {
+      font-size: .7rem;
+      text-align: center;
+    }
+
+    .reviews .fa-star {
+      font-size: .7rem;
+      
+    }
+
+    .box-top{
+      flex-direction: column;
+      align-items: center;
+      
+    }
+    .profile{
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .title{
+     font-size: 1.2em;
+    }
+      
+    .vision p{
+      font-size: .8em;
+    }
+
+    .course-card{
+      width: 10em;
+    }
+    
+  }
+
+  @media screen and (max-width:380px) {
+
+    .title{
+      font-size: 1.3em;
+    }
+  
+    .vision {
+      min-height: 20vh;
+    } 
+  
+    .vision p{
+      font-size: .8em;
+    }
+    .course-card{
+      width: 9em;
+    }
+
+    .courses-desc{
+      font-size: 0.5em;
+    }
+    
+    .course-title{
+      font-size: .7em;
+    }
+
+    .name-user strong {
+      font-size: .7rem;
+    }
+    .parent-comment p {
+      font-size: .6rem;
+    }
+   
+  }
+
+  @media screen and (max-width: 280px) {
+
+    .title{
+      font-size: 1em;
+    }
+  
+    .vision {
+      min-height: 15vh;
+    } 
+  
+    .vision p{
+      font-size: .5em;
+    }
+
+
+  }
