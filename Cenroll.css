@@ -159,3 +159,22 @@
     justify-items: center;
     display: flex;
 }
+
+#enrollmentInfo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 2em;
+}
+
+#enrollmentInfo h2,
+#enrollmentInfo p {
+    flex-basis: 100%;
+}
+
+/* Adjust the styles for smaller screens */
+@media (max-width: 600px) {
+    #enrollmentInfo {
+        flex-direction: column;
+    }
+}
