@@ -324,7 +324,7 @@ input[type="email"] {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100px;
+    height: 100%;
     padding: 0 10px;
 }
 .rate:not(:checked) > input {
@@ -337,9 +337,10 @@ input[type="email"] {
     overflow:hidden;
     white-space:nowrap;
     cursor:pointer;
-    font-size:60px;
+    font-size:400%;
     color:#ccc;
 }
+
 .rate:not(:checked) > label:before {
     content: '★ ';
 }
@@ -393,3 +394,9 @@ input[type="email"] {
 .popup:target {
     display: block;
 }
+@media (max-width: 600px) {
+    .rate:not(:checked) > label {
+        font-size: 200%; /* Adjust the font size for smaller screens */
+    }
+}
+
