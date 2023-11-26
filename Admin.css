@@ -148,7 +148,7 @@
   text-align: center;
   }
   
-  .list{
+  .list,.listS{
   list-style-position: inside;
   list-style:none;
   text-align:center;
@@ -159,7 +159,7 @@
   }
   
   
-  .list li{
+  .list li,.listS li{
     background-repeat: no-repeat;
     background-clip: content-box;
     background-size: 20% 100%,cover;
@@ -270,7 +270,7 @@
  
   }
   
-  .student .list li{
+  .student .listS li{
     background-repeat: no-repeat;
     background-clip: content-box;
     background-size: 10% 100%,cover;
@@ -280,13 +280,13 @@
   font-size:1.8vw;
   }
 
-  .list .girl{
+  .listS .girl{
   background-image: url(images/daughter.png);
   
   
   }
   
-  .list .boy{
+  .listS .boy{
   background-image: url(images/son.png);
   
   }
@@ -365,28 +365,16 @@ right:-45vw;
 }
 
 
-.popup{
-  position: relative;
-  display: flex;
-  visibility: hidden;
+
+.ok{
+  padding:0.5%;
+  border-width: 2px;
+    border-color: black;
+    border-radius: 20%;
+    margin:3% 50%;
+    width:7vw;
+    align-self: center;
+    font-size: 1.5vw;
+    visibility: hidden;
+
 }
-
-
-#ok{
- font-size: 40px;
-width:60px;
-height: fit-content;
-  position: absolute;
-margin:1%;
-top:-10px;
-right:-10px;
-  border: none;
-  border-radius: 20px;
-background-color: unset;
-color:#80207e;
-}
-
-
-
-
-
