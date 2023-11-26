@@ -1,8 +1,8 @@
 function displayChildName() {
   if (JSON.parse(localStorage.getItem('names')==null)){
     var kidsContainer = document.querySelector('.kidscontainer');
-    const randName=["Taleen Fahad", "Rayan Fahad"]
-    const imgsrc=["images/daughter.png", "images/son.png" ]
+    var randName=["Taleen Fahad", "Rayan Fahad"];
+    const imgsrc=["images/daughter.png", "images/son.png" ];
     for (let i=0; i<2; i++){
     var kidInfoElement = document.createElement('div');
     kidInfoElement.classList.add('kidinfo');
@@ -16,11 +16,11 @@ function displayChildName() {
 
     kidInfoElement.appendChild(picElement);
     kidInfoElement.appendChild(nameElement);
-    kidsContainer.appendChild(kidInfoElement);
+    kidsContainer.appendChild(kidInfoElement); 
 }
 
   }
-  else{
+  else{  
   var childNames = JSON.parse(localStorage.getItem('names') || '[]');
   var kidsContainer = document.querySelector('.kidscontainer');
   childNames.forEach(function(name, index) {

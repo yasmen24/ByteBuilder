@@ -560,11 +560,13 @@
             kidsFilter.appendChild(kidOption);
         }
     } else {
-        var noKidsOption = document.createElement("option");
-        noKidsOption.value = "";
-        noKidsOption.textContent = "No registered kids yet";
-        noKidsOption.disabled = true;
-        kidsFilter.appendChild(noKidsOption);
+        var randName=["Taleen Fahad", "Rayan Fahad"];
+        for (i = 0; i < randName.length; i++) {
+            var kidOption = document.createElement("option");
+            kidOption.value = randName[i];
+            kidOption.textContent = randName[i];
+            kidsFilter.appendChild(kidOption);
+        }
     }
 
     // Disable label option
