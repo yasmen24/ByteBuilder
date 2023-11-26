@@ -69,7 +69,8 @@
 
             <select id="kidsFilter">
                 <option value="" selected disabled>Kid</option>
-                <option value="">All Kids</option>
+
+
             </select>
             <select id="tutorFilter">
                 <option value="" selected disabled>Tutor</option>
@@ -553,21 +554,25 @@
     if (kids) {
         kids = JSON.parse(kids);
 
+
+        var randName=["Taleen Fahad", "Rayan Fahad"];
+        for (k = 0; k < randName.length; k++) {
+            var kidOption = document.createElement("option");
+            kidOption.value = randName[k];
+            kidOption.textContent = randName[k];
+            kidsFilter.appendChild(kidOption);
+
+        }
         for (i = 0; i < kids.length; i++) {
             var kidOption = document.createElement("option");
             kidOption.value = kids[i];
             kidOption.textContent = kids[i];
-            kidsFilter.appendChild(kidOption);
-        }
-    } else {
-        var randName=["Taleen Fahad", "Rayan Fahad"];
-        for (i = 0; i < randName.length; i++) {
-            var kidOption = document.createElement("option");
-            kidOption.value = randName[i];
-            kidOption.textContent = randName[i];
-            kidsFilter.appendChild(kidOption);
-        }
+            kidsFilter.appendChild(kidOption);}
+
+
     }
+
+
 
     // Disable label option
     labelKidsOption.disabled = true;

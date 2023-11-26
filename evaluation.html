@@ -129,37 +129,26 @@
             <div class="wrapper_kids">
                 <div class="filter_kids">
                     <details class="kids-dropdown">
-                        <summary class="kids-radios">
+                        <summary class="kids-radios" id="kids-radios">
                             <input type="radio" name="kids-item" id="kids-default" title="Kids" checked>
+                            <input type="radio" name="kids-item" id="kid0" title="Taleen Fahad">
+                            <input type="radio" name="kids-item" id="kid1" title="Rayan Fahad">
                         </summary>
                         <ul class="list" id="kids-list">
-                            <!-- Dynamic options  -->
+                            <li>
+                                <label for="kid0">
+
+                                    Taleen Fahad </label>
+                            </li>
+                            <li>
+                                <label for="kid1">
+
+                                    Rayan Fahad  </label>
+                            </li>
                         </ul>
                     </details>
                 </div>
             </div>
-<!--            <div class="wrapper_kids">-->
-<!--                <div class="filter_kids">-->
-<!--                    <details class="kids-dropdown">-->
-<!--                        <summary class="kids-radios">-->
-<!--                            <input type="radio" name="kids-item" id="kids-default" title="Kids" checked>-->
-<!--                            <input type="radio" name="kids-item" id="kids-item1" title="Taleen Alshebel">-->
-<!--                            <input type="radio" name="kids-item" id="kids-item2" title="Rayan Alshebel">-->
-
-<!--                        </summary>-->
-<!--                        <ul class="list">-->
-<!--                            <li>-->
-<!--                                <label for="kids-item1">Taleen Alshebel <span></span></label>-->
-<!--                            </li>-->
-<!--                            <li>-->
-<!--                                <label for="kids-item2">Rayan Alshebel</label>-->
-<!--                            </li>-->
-<!--                        </ul>-->
-<!--                    </details>-->
-<!--                </div>-->
-<!--            </div>-->
-
-
 
                 <div class="title">
                 <h3>Your Feedback:</h3>
@@ -270,37 +259,61 @@
 
     document.onload = retrieveTheme();
 
-    // Retrieve kids options from local storage
-    var kidsOptions = localStorage.getItem('name');
-    var kidsList = document.getElementById('kids-list');
 
-    if (kidsOptions) {
-        kidsOptions = JSON.parse(kidsOptions);
+    // Get all the input elements within the course dropdown
+    var courseInputs = document.querySelectorAll('.course-radios input[type="radio"]');
 
-        // Create and append option elements based on the retrieved data
-        kidsOptions.forEach(function(option) {
-            var li = document.createElement('li');
-            var label = document.createElement('label');
-            var input = document.createElement('input');
-            input.type = 'radio';
-            input.name = 'kids-item';
-            input.id = option.id;
-            input.title = option.title;
-
-            label.htmlFor = option.id;
-            label.textContent = option.title;
-
-            li.appendChild(input);
-            li.appendChild(label);
-
-            kidsList.appendChild(li);
+    // Add an event listener to each input element
+    courseInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+            var courseDropdown = this.closest('.course-dropdown');
+            courseDropdown.removeAttribute('open');
         });
-    } else {
-        // If there are no registered kids, display a message
-        var li = document.createElement('li');
-        li.textContent = 'No kids registered yet.';
+    });
+
+
+    var kidsInputs = document.querySelectorAll('.kids-radios input[type="radio"]');
+
+    // Add an event listener to each input element
+    kidsInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+            var kidsDropdown = this.closest('.kids-dropdown');
+            kidsDropdown.removeAttribute('open');
+        });
+    });
+
+    // Retrieve kids data from local storage
+    var additionalKid = localStorage.getItem("names");
+    additionalKid = JSON.parse(additionalKid);
+
+
+    var kidsRadio = document.getElementById("kids-radios")
+    var kidsList = document.getElementById("kids-list");
+
+    // Create additional option elements for the default kids
+    for(let i = 0; i<additionalKid.length; i++){
+        var option = document.createElement("input");
+        option.setAttribute("type", "radio")
+        option.setAttribute("name", "kids-item")
+        option.setAttribute("id", "kidGenerated"+i)
+        option.setAttribute("title", additionalKid[i])
+        kidsRadio.appendChild(option);
+
+        var li = document.createElement("li");
+        var label = document.createElement("label");
+        label.setAttribute("for", "kidGenerated"+i)
+        label.textContent = additionalKid[i];
+        li.appendChild(label);
         kidsList.appendChild(li);
+
+        // Add event listener
+        option.addEventListener("change", function() {
+            var kidsDropdown = this.closest(".kids-dropdown");
+            kidsDropdown.removeAttribute("open");
+        });
+
     }
+
     function validateForm(event) {
         event.preventDefault(); // Prevent form submission
 
@@ -308,6 +321,12 @@
         var courseSelected = document.querySelector('input[name="course-item"]:checked');
         if (!courseSelected || courseSelected.id === 'course-default') {
             alert("Please select a course.");
+            return;
+        }
+        // Check if a kid is selected
+        var kidSelected = document.querySelector('input[name="kids-item"]:checked');
+        if (!kidSelected || kidSelected.id === 'kids-default') {
+            alert("Please select a kid.");
             return;
         }
 
@@ -324,10 +343,6 @@
 
         // Display the alert message
         alert("Thank you for your feedback!\nYour rating for course " + courseName + " is " + userRating);
-
-        // Optionally, you can submit the form here
-        // document.querySelector('form').submit();
-
 
 
     // Return to the previous page

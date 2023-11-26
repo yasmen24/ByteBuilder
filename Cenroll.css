@@ -5,6 +5,7 @@
     align-items: center;
 }
 
+
 /* filter */
 .filter-container {
     display: flex;
@@ -14,6 +15,7 @@
     background-color: white;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     padding: 1px 20px;
+    border-radius: 10px;
 }
 
 .filter-container select {
@@ -24,6 +26,7 @@
     margin-bottom: 10px;
     background-color: white;
     border: none;
+
     color: grey;
 }
 
@@ -32,6 +35,14 @@
         padding: 5px;
     }
 }
+.info-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/*course cards*/
+
 
 
 .CoursesContainer{
