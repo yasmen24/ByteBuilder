@@ -56,18 +56,18 @@ onload=function(){
 let Allstudent=['zaid Abdullah','Julien Muhammad', 'saud Muhammad','Remaz Slimane','Talal Muhammad'
 ,'Lana Slimane','Hesham Slimane','Reema Abdulrahman','Bassam Ahmad','lara Muhammad','Msharry Ahmed'
 ,'Dana Mansour','Moaz Muhammad','Nora Mansour','Abdullah Saleh','Shatha Saleh','Hassan Saleh'
-,'Sara Muhammad','Rayan Alshebel','Taleen Alshebel']
+,'Sara Muhammad','Rayan Alshebel','Taleen Alshebel'];
 
 
 ///courses students 
 
-let allcources=['AICourse' ,'arduinoCourse','scratshCourse']
+let allcources=['AICourse' ,'arduinoCourse','scratshCourse'];
 
-let AICourse=['Taleen Alshebel','Hassan Saleh','Dana Mansour','Rayan Alshebel','Lana Slimane','Bassam Ahmad','Nora Mansour']
+let AICourse=['Taleen Alshebel','Hassan Saleh','Dana Mansour','Rayan Alshebel','Lana Slimane','Bassam Ahmad','Nora Mansour'];
 
-let  arduinoCourse=['Nora Mansour','Bassam Ahmad','Remaz Slimane','zaid Abdullah','Dana Mansour','Hassan Saleh','Sara Muhammad']
+let  arduinoCourse=['Nora Mansour','Bassam Ahmad','Remaz Slimane','zaid Abdullah','Dana Mansour','Hassan Saleh','Sara Muhammad'];
 
-let  scratshCourse=['Sara Muhammad','Talal Muhammad','lara Muhammad','Hassan Saleh','Shatha Saleh','Hesham Slimane','Lana Slimane','Abdullah Saleh']
+let  scratshCourse=['Sara Muhammad','Talal Muhammad','lara Muhammad','Hassan Saleh','Shatha Saleh','Hesham Slimane','Lana Slimane','Abdullah Saleh'];
 
 
 
@@ -155,7 +155,7 @@ let studentwindoe=function (arrayC){
         
         tex=document.createTextNode(arrayC[j]);
         students.appendChild(tex);
-       list.appendChild(students)
+       list.appendChild(students);
     }
     closse();
     }
@@ -171,7 +171,6 @@ let studentwindoe=function (arrayC){
     showMore=document.querySelectorAll('.btn')[0];
     closebtn.addEventListener('click',showless);
 
-   // closebtn.addEventListener('click',removeStudent(index,arrayC))
 
 
     break;
@@ -180,7 +179,6 @@ let studentwindoe=function (arrayC){
         showMore=document.querySelectorAll('.btn')[1];
         closebtn.addEventListener('click',showless);
 
-       // closebtn.addEventListener('click',removeStudent(index,arrayC))
 
 
      break;
@@ -192,8 +190,8 @@ let studentwindoe=function (arrayC){
      break;
     
     }
-    closebtn.style.cssText=`    visibility: visible; `
-    showMore.style.cssText=`    visibility: hidden; `
+    closebtn.style.cssText=`    visibility: visible; `;
+    showMore.style.cssText=`    visibility: hidden; `;
 
     
 
@@ -216,10 +214,10 @@ let studentwindoe=function (arrayC){
         
         tex=document.createTextNode(arrayC[l]);
         students.appendChild(tex);
-       list.appendChild(students)
+       list.appendChild(students);
     }
-    closebtn.style.cssText=`    visibility:hidden ; `
-    showMore.style.cssText=`    visibility: visible; `
+    closebtn.style.cssText=`    visibility:hidden ; `;
+    showMore.style.cssText=`    visibility: visible; `;
 
 
 
